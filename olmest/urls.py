@@ -16,11 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from pages.views import home_view, buyorsell_view
+from products.views import SellFormView, test_view
+
+app_name = "sellers"
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("buyorsell",buyorsell_view,name="buyorsell"),
     path("homepage/",home_view,name="home"),
-    path("",home_view,name="home")
+    path("form", SellFormView.as_view(), name = "create"),
+    path("test",test_view, name ="test"),
 ]

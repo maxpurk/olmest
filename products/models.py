@@ -16,7 +16,7 @@ class Product(models.Model):
     condition     = models.CharField(max_length = 30, blank = True)
     brand         = models.CharField(max_length = 30, blank=True)
     descriptionText = models.TextField(blank = True)
-    availabe = models.BooleanField(blank=True)
+    available = models.BooleanField(blank=True)
     tags           = models.ManyToManyField(Tag, blank = True)
 
     def __str__(self):
