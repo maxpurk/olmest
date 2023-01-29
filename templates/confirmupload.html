@@ -27,7 +27,26 @@
   </head>
   <body>
     <h1>Thank you for adding your product</h1>
-    <button>Add another product</button>
-    <button>Go to the homepage</button>
+    <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+      <div style="display: flex;">
+        <form action="{% url 'create' %}" method="get" 
+              style="width: 50%; margin-top: 50px;">
+          <input type="submit" value="Add another product" 
+                 style="padding: 15px 30px; font-size: 18px; 
+                        background-color: #4CAF50; color: white; border: none; 
+                        border-radius: 10px;">
+        </form>
+        
+        <div style="width: 20px;"></div>
+        
+        <form action="{% url 'home' %}" method="get" 
+              style="width: 50%; margin-top: 50px;">
+          <input type="submit" value="Go to the Homepage" 
+                 style="padding: 15px 30px; font-size: 18px; 
+                        background-color: #4CAF50; color: white; border: none; 
+                        border-radius: 10px;">
+        </form>
+      </div>
+    </div>
   </body>
 </html>

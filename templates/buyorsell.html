@@ -24,9 +24,26 @@
   </head>
   <body>
     <h1>Do you want to buy or sell medical products?</h1>
-    <div style="text-align: center;">
-      <button>Buy</button>
-      <button>Sell</button>
+    <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+      <div style="display: flex;">
+        <form action="{% url 'home' %}" method="get" 
+              style="width: 50%; margin-top: 50px;">
+          <input type="submit" value="Buy" 
+                 style="padding: 15px 30px; font-size: 18px; 
+                        background-color: #4CAF50; color: white; border: none; 
+                        border-radius: 10px;">
+        </form>
+        
+        <div style="width: 20px;"></div>
+        
+        <form action="{% url 'create' %}" method="get" 
+              style="width: 50%; margin-top: 50px;">
+          <input type="submit" value="Sell" 
+                 style="padding: 15px 30px; font-size: 18px; 
+                        background-color: #4CAF50; color: white; border: none; 
+                        border-radius: 10px;">
+        </form>
+      </div>
     </div>
   </body>
 </html>

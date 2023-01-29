@@ -38,6 +38,14 @@
 <body>
   <h1>Welcome to Olmest.com, a website developed by Gayathri and Max!</h1>
   <img src="{% static "medequip.jpeg" %}" alt="Medical Equipment">
-  <button>Start now</button>
+
+  <form action="{% url 'buyorsell' %}" method="get">
+    <input type="submit" value="Start now" 
+           style="margin-top: 50px; padding: 15px 30px; font-size: 18px; 
+                  background-color: #4CAF50; color: white; border: none; 
+                  border-radius: 10px; display: block; margin-left: auto; 
+                  margin-right: auto;">
+  </form>
+
 </body>
 </html>

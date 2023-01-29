@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import FormView
 from django.urls import reverse_lazy
 from .forms import SellForm
@@ -8,13 +8,10 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-
-
-
 class SellFormView(FormView):
     form_class = SellForm
     template_name= "create.html"
-    success_url = reverse_lazy("home")
+    success_url = reverse_lazy("confirmupload")
 
     def form_valid(self, form):
         #logic

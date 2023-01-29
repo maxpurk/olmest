@@ -5,7 +5,6 @@ class SellForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = (
-            "productID",
             "name",
             "price",
             "condition",

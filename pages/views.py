@@ -5,7 +5,6 @@ from django.http import HttpResponse
 
 
 def home_view(request, *args, **kwargs):
-	#return HttpResponse("<h1>Hello World</hi>") #string of html code
 	return render(request, "home.html", {})
 
 def buyorsell_view(request, *args, **kwargs):

@@ -26,7 +26,7 @@ app_name = "sellers"
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("buyorsell",buyorsell_view,name="buyorsell"),
-    path("homepage/",home_view,name="home"),
+    path("",home_view,name="home"),
     path("form", SellFormView.as_view(), name = "create"),
     path("test",test_view, name ="test"),
     path("confirmupload",confirmupload_view, name = "confirmupload"),

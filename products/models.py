@@ -9,7 +9,6 @@ class Tag(models.Model):
         return str(self.name)
 
 class Product(models.Model): 
-    productID     = models.IntegerField()
     name          = models.CharField(max_length=30)
     dateOfUpload  = models.DateField(blank=True, auto_now=True)
     price         = models.FloatField(blank = True)
@@ -20,7 +19,7 @@ class Product(models.Model):
     tags           = models.ManyToManyField(Tag, blank = True)
 
     def __str__(self):
-        return f"Product with ProductID: {self.productID}"
+        return f"Product with name: {self.name}"
 
     def get_tags(self):
         return self.tags.all()
