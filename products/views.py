@@ -27,3 +27,6 @@ class SellFormView(FormView):
 def test_view(request, *args, **kwargs):
 	return HttpResponse("<h1>Hello World</hi>") #string of html code
 	#return render(request, "home.html", {})
+
+def confirmupload_view(request, *args, **kwargs):
+	return render(request, "confirmupload.html", {})

@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from pages.views import home_view, buyorsell_view
-from products.views import SellFormView, test_view
+from products.views import SellFormView, test_view, confirmupload_view
+from django.conf import settings
+from django.conf.urls.static import static
 
 app_name = "sellers"
 
@@ -27,4 +29,5 @@ urlpatterns = [
     path("homepage/",home_view,name="home"),
     path("form", SellFormView.as_view(), name = "create"),
     path("test",test_view, name ="test"),
-]
+    path("confirmupload",confirmupload_view, name = "confirmupload"),
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
