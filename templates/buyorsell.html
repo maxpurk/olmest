@@ -1,14 +1,32 @@
-{% extends "base.html" %}
-
-{% block content %}
-<body>
-        <p> <strong>Do you want to sell or buy?</strong></p>
-            <ul>
-			  <li>Buy</li>
-			  <li>Sell Todo: Add here a hyperlink to the selling page</li>
-		    </ul>
-
-      
-
-</body>
-  {% endblock %}
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <style>
+    body {
+      background-color: #FFF9C4;
+      text-align: center;
+    }
+      button {
+        font-size: 20px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 40px;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Do you want to buy or sell medical products?</h1>
+    <div style="text-align: center;">
+      <button>Buy</button>
+      <button>Sell</button>
+    </div>
+  </body>
+</html>

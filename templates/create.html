@@ -1,13 +1,29 @@
-{% extends "base.html" %}
-
-{%block title%}
-    create
-{% endblock title%}
-
-{%block content%}
- <form action = "" method="POST">
-    {%csrf_token%}
-    {{form.as_p}}
-    <button type ="submit" class= "btn btn-primary" >save</button>
- </form>
-{% endblock content%}
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <style>
+        body {
+          background-color: #FFF9C4;
+          text-align: center;
+        }
+          button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+          }
+          h1 {
+            text-align: center;
+            font-size: 40px;
+            font-family: sans-serif;
+          }
+        </style>
+    <form action = "" method="POST">
+        {%csrf_token%}
+        {{form.as_p}}
+  
+        <button type ="submit" class= "btn btn-primary" >save</button>
+    </form>
+</html>
